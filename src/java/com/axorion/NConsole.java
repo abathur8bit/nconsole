@@ -1,3 +1,5 @@
+package com.axorion;
+
 public class NConsole {
     public native int add(int n);
     public native int getch();
@@ -25,8 +27,8 @@ public class NConsole {
     public static void main( String[] args ) {
         boolean running = true;
         System.out.println("Hello, loading native lib");
-        System.loadLibrary("jni");
-        JCurses app = new JCurses();
+        System.loadLibrary("nconsole");
+        NConsole app = new NConsole();
         int result = app.add(5);
         System.out.println("Result from native call is " + result);
 
