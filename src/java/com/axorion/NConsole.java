@@ -9,7 +9,7 @@ public class NConsole {
     public native int printw(String s);
     public native int printCenter(String s);
     public native int printCenterX(int y,String s);
-    public native int init_pair(int pair,int fg,int bg);
+    public native int initPair(int pair,int fg,int bg);
     public native int attron(int pair);
     public native int attroff(int pair);
     public native int clear();
@@ -34,6 +34,7 @@ public class NConsole {
 
     //java -Djava.library.path=cmake-build-debug NConsole
     public static void main( String[] args ) {
+        int ch;
         boolean running = true;
         System.out.println("Hello, loading native lib");
         System.loadLibrary("nconsole");
@@ -42,17 +43,16 @@ public class NConsole {
         System.out.println("Result from native call is " + result);
 
         app.initscr();
+        app.initPair(1,7,COLOR_BLUE);
+        app.initPair(2,COLOR_WHITE,COLOR_RED);
+
         String title = "NCursor Test";
         String msg = "Screen Size: ["+app.getScreenWidth()+"x"+app.getScreenHeight()+"]";
+        app.attron(1);
         app.printCenter(title);
+        app.attroff(1);
         app.printCenterX(app.getScreenHeight()/2+2,msg);
-//        app.init_pair(1,COLOR_YELLOW,COLOR_BLUE);
-//        app.init_pair(2,COLOR_WHITE,COLOR_RED);
-//        app.attron(1);
-//        app.clear();
-//        app.attroff(1);
-        app.move(20,20);
-        int ch = -1;
+
         do {
             ch = app.getch();
             app.home();
@@ -60,6 +60,7 @@ public class NConsole {
             if(ch == 'q')
                 running = false;
         } while(running);
+
         app.endwin();
 
         System.out.println("Typed ["+ch+"]");

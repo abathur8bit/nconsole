@@ -7,7 +7,9 @@ int screenWidth=0,screenHeight=0;
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_add(JNIEnv *env, jobject obj, jint num)
 {
-    return num*num;
+    printf("COLOR_YELLOW %02X A_BOLD=%02X ored=%02X\n",COLOR_YELLOW,A_BOLD,COLOR_YELLOW|A_BOLD);
+    return COLOR_YELLOW|A_BOLD;
+//    return num*num;
 }
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_initscr(JNIEnv *env, jobject obj)
@@ -64,7 +66,7 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printCenterX(JNIEnv * env, jobj
     return 0;
 }
 
-JNIEXPORT jint JNICALL Java_com_axorion_NConsole_init_pair(JNIEnv *env, jobject obj, jint pair, jint fg, jint bg)
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_initPair(JNIEnv *env, jobject obj, jint pair, jint fg, jint bg)
 {
     return init_pair(pair,fg,bg);
 }
@@ -74,7 +76,7 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_clear(JNIEnv *env, jobject obj)
 }
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attron(JNIEnv *env, jobject obj, jint pair)
 {
-    return attron(COLOR_PAIR(pair));;
+    return attron(COLOR_PAIR(pair));
 }
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attroff(JNIEnv *env, jobject obj, jint pair)
 {

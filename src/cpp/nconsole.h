@@ -23,7 +23,7 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printw(JNIEnv *, jobject, jstri
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printCenter(JNIEnv *, jobject, jstring);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printCenterX(JNIEnv *, jobject, jint, jstring);
 
-JNIEXPORT jint JNICALL Java_com_axorion_NConsole_init_pair(JNIEnv *env, jobject obj, jint pair, jint fg, jint bg);
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_initPair(JNIEnv *env, jobject obj, jint pair, jint fg, jint bg);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attron(JNIEnv *env, jobject obj, jint pair);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attroff(JNIEnv *env, jobject obj, jint pair);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_clear(JNIEnv *env, jobject obj);

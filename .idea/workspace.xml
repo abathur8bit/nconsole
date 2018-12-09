@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d132002e-379b-4bda-85e6-2a05bac64e58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nconsole.sh" beforeDir="false" afterPath="$PROJECT_DIR$/nconsole.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cpp/nconsole.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/cpp/nconsole.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cpp/nconsole.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/cpp/nconsole.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/com/axorion/NConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/axorion/NConsole.java" afterDir="false" />
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -49,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="636">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -73,8 +72,10 @@
     <findStrings>
       <find>JCurses</find>
       <find>Java_NConsole</find>
-      <find>printw</find>
       <find>move</find>
+      <find>init</find>
+      <find>initpa</find>
+      <find>printw</find>
     </findStrings>
     <replaceStrings>
       <replace>NConsole</replace>
@@ -224,7 +225,7 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -237,15 +238,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="636">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
