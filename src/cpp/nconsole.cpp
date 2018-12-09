@@ -1,6 +1,6 @@
 #include "nconsole.h"
 
-#include <iostream>
+#include <string.h>
 #include <curses.h>
 
 int screenWidth=0,screenHeight=0;
