@@ -7,12 +7,17 @@ public class NConsole {
     public native int move(int x,int y);
     public native int endwin();
     public native int printw(String s);
+    public native int printCenter(String s);
+    public native int printCenterX(int y,String s);
     public native int init_pair(int pair,int fg,int bg);
     public native int attron(int pair);
     public native int attroff(int pair);
     public native int clear();
     public native int clrtobot();
     public native int clrtoeol();
+
+    public native int getScreenWidth();
+    public native int getScreenHeight();
 
     public static int COLOR_BLACK=0;
     public static int COLOR_RED=1;
@@ -22,6 +27,10 @@ public class NConsole {
     public static int COLOR_MAGENTA=5;
     public static int COLOR_CYAN=6;
     public static int COLOR_WHITE=7;
+
+    public void home() {
+        move(0,0);
+    }
 
     //java -Djava.library.path=cmake-build-debug NConsole
     public static void main( String[] args ) {
@@ -33,6 +42,10 @@ public class NConsole {
         System.out.println("Result from native call is " + result);
 
         app.initscr();
+        String title = "NCursor Test";
+        String msg = "Screen Size: ["+app.getScreenWidth()+"x"+app.getScreenHeight()+"]";
+        app.printCenter(title);
+        app.printCenterX(app.getScreenHeight()/2+2,msg);
 //        app.init_pair(1,COLOR_YELLOW,COLOR_BLUE);
 //        app.init_pair(2,COLOR_WHITE,COLOR_RED);
 //        app.attron(1);
@@ -42,7 +55,7 @@ public class NConsole {
         int ch = -1;
         do {
             ch = app.getch();
-            app.move(0,0);
+            app.home();
             app.printw("typed ["+ch+"]");
             if(ch == 'q')
                 running = false;

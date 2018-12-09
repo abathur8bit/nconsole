@@ -12,8 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d132002e-379b-4bda-85e6-2a05bac64e58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/nconsole.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nconsole.sh" beforeDir="false" afterPath="$PROJECT_DIR$/nconsole.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cpp/nconsole.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/cpp/nconsole.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cpp/nconsole.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/cpp/nconsole.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/com/axorion/NConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/axorion/NConsole.java" afterDir="false" />
@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+            <state relative-caret-position="195">
+              <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+            <state relative-caret-position="351">
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -61,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/axorion/NConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="285">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -73,6 +73,8 @@
     <findStrings>
       <find>JCurses</find>
       <find>Java_NConsole</find>
+      <find>printw</find>
+      <find>move</find>
     </findStrings>
     <replaceStrings>
       <replace>NConsole</replace>
@@ -86,6 +88,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/java/com/axorion/NConsole.java" />
         <option value="$PROJECT_DIR$/src/cpp/nconsole.h" />
         <option value="$PROJECT_DIR$/src/cpp/nconsole.cpp" />
       </list>
@@ -109,32 +112,6 @@
             <path>
               <item name="nconsole" type="b2602c69:ProjectViewProjectNode" />
               <item name="nconsole" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nconsole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nconsole" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nconsole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nconsole" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nconsole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nconsole" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="nconsole.dir" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nconsole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nconsole" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="nconsole.dir" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nconsole" type="b2602c69:ProjectViewProjectNode" />
@@ -210,6 +187,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1160" y="24" width="1400" height="1250" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -243,13 +221,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/cpp/library.h" />
     <entry file="file://$PROJECT_DIR$/src/cpp/library.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/java/com/axorion/NConsole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -257,17 +228,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/axorion/NConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        <state relative-caret-position="195">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+        <state relative-caret-position="351">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

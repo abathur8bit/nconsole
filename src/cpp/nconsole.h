@@ -12,12 +12,16 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_initscr(JNIEnv *env, jobject ob
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_endwin(JNIEnv *env, jobject obj);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_move(JNIEnv *env, jobject obj, jint x,jint y);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getch(JNIEnv *env, jobject obj);
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenWidth(JNIEnv *env, jobject obj);
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenHeight(JNIEnv *env, jobject obj);
 /*
  * Class:     NConsole
  * Method:    printw
  * Signature: (Ljava/lang/String;)I
  */
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printw(JNIEnv *, jobject, jstring);
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printCenter(JNIEnv *, jobject, jstring);
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printCenterX(JNIEnv *, jobject, jint, jstring);
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_init_pair(JNIEnv *env, jobject obj, jint pair, jint fg, jint bg);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attron(JNIEnv *env, jobject obj, jint pair);

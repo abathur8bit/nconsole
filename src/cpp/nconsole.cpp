@@ -3,6 +3,8 @@
 #include <iostream>
 #include <curses.h>
 
+int screenWidth=0,screenHeight=0;
+
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_add(JNIEnv *env, jobject obj, jint num)
 {
     return num*num;
@@ -14,6 +16,7 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_initscr(JNIEnv *env, jobject ob
     raw();
     noecho();
     start_color();
+    getmaxyx(stdscr,screenHeight,screenWidth);
     return 0;
 }
 
@@ -24,9 +27,8 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_endwin(JNIEnv *env, jobject obj
 }
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_move(JNIEnv *env, jobject obj, jint x,jint y)
 {
-    return move(x,y);
+    return move(y,x);
 }
-
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getch(JNIEnv *env, jobject obj)
 {
     return getch();
@@ -36,11 +38,30 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getch(JNIEnv *env, jobject obj)
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printw(JNIEnv * env, jobject obj, jstring string)
 {
 
-    const char *str = (*env).GetStringUTFChars(string, 0);
+    const char *str = env->GetStringUTFChars(string, 0);
     int retval = printw("%s",str);
-    (*env).ReleaseStringUTFChars(string, str);
+    env->ReleaseStringUTFChars(string, str);
 
     return retval;
+}
+
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printCenter(JNIEnv * env, jobject obj, jstring string)
+{
+    const char *str = env->GetStringUTFChars(string, 0);
+    move(screenHeight/2,screenWidth/2-strlen(str)/2);
+    printw(str);
+    env->ReleaseStringUTFChars(string, str);
+    return 0;
+}
+
+
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_printCenterX(JNIEnv * env, jobject obj, jint y, jstring string)
+{
+    const char *str = env->GetStringUTFChars(string, 0);
+    move(y,screenWidth/2-strlen(str)/2);
+    printw(str);
+    env->ReleaseStringUTFChars(string, str);
+    return 0;
 }
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_init_pair(JNIEnv *env, jobject obj, jint pair, jint fg, jint bg)
@@ -76,4 +97,13 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_clrtobot(JNIEnv *env, jobject o
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_clrtoeol(JNIEnv *env, jobject obj)
 {
     return clrtoeol();
+}
+
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenWidth(JNIEnv *env, jobject obj)
+{
+    return screenWidth;
+}
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenHeight(JNIEnv *env, jobject obj)
+{
+    return screenHeight;
 }
