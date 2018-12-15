@@ -32,15 +32,19 @@ public class NConsole {
         move(0,0);
     }
 
+    public NConsole() {
+        System.out.println("Hello, loading native lib");
+        System.loadLibrary("nconsole");
+    }
+
     //java -Djava.library.path=cmake-build-debug NConsole
     public static void main( String[] args ) {
         int ch;
         boolean running = true;
-        System.out.println("Hello, loading native lib");
-        System.loadLibrary("nconsole");
         NConsole app = new NConsole();
         int result = app.add(5);
         System.out.println("Result from native call is " + result);
+
 
         app.initscr();
         app.initPair(1,7,COLOR_BLUE);
@@ -53,9 +57,9 @@ public class NConsole {
         app.attroff(1);
         app.printCenterX(app.getScreenHeight()/2+2,msg);
 
+        app.home();
         do {
             ch = app.getch();
-            app.home();
             app.printw("typed ["+ch+"]");
             if(ch == 'q')
                 running = false;

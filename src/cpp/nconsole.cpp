@@ -7,9 +7,7 @@ int screenWidth=0,screenHeight=0;
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_add(JNIEnv *env, jobject obj, jint num)
 {
-    printf("COLOR_YELLOW %02X A_BOLD=%02X ored=%02X\n",COLOR_YELLOW,A_BOLD,COLOR_YELLOW|A_BOLD);
-    return COLOR_YELLOW|A_BOLD;
-//    return num*num;
+    return num+num;
 }
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_initscr(JNIEnv *env, jobject obj)
