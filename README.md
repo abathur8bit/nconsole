@@ -93,3 +93,7 @@ int main( int argc, char **argv )
   inotify_rm_watch( fd, wd );
 }
 ```
+
+
+[garfield]: https://github.com/abathur8bit/garfield
+[nconsole]: https://github.com/abathur8bit/nconsole
