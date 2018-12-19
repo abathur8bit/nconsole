@@ -90,11 +90,11 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_clear(JNIEnv *env, jobject obj)
 }
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attron(JNIEnv *env, jobject obj, jint pair)
 {
-    return  (COLOR_PAIR(pair));
+    return  attron(COLOR_PAIR(pair));
 }
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attroff(JNIEnv *env, jobject obj, jint pair)
 {
-    return attroff(COLOR_PAIR(pair));;
+    return attroff(COLOR_PAIR(pair));
 }
 
 /**
