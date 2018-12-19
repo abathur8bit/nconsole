@@ -34,7 +34,6 @@ public class NConsole {
     }
 
     public NConsole() {
-        System.out.println("Hello, loading native lib");
         System.loadLibrary("nconsole");
     }
 

@@ -12,22 +12,12 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_add(JNIEnv *env, jobject obj, j
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_initscr(JNIEnv *env, jobject obj)
 {
-    printf("Hello from native\n");
     initscr();
     raw();
     noecho();
     if(has_colors()) {
-        move(0,0);
-        printw("Has colors");
-        getch();
         start_color();
-    } else {
-        move(0,0);
-        printf("No colors");
-        getch();
     }
-    printf("Good bye from native\n");
-
     getmaxyx(stdscr,screenHeight,screenWidth);
     return 0;
 }
