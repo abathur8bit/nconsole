@@ -4,6 +4,7 @@ public class NConsole {
     public native int add(int n);
     public native int getch();
     public native int initscr();
+    public native int hasColors();
     public native int move(int x,int y);
     public native int endwin();
     public native int printw(String s);

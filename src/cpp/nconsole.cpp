@@ -12,14 +12,30 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_add(JNIEnv *env, jobject obj, j
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_initscr(JNIEnv *env, jobject obj)
 {
+    printf("Hello from native\n");
     initscr();
     raw();
     noecho();
-    start_color();
+    if(has_colors()) {
+        move(0,0);
+        printw("Has colors");
+        getch();
+        start_color();
+    } else {
+        move(0,0);
+        printf("No colors");
+        getch();
+    }
+    printf("Good bye from native\n");
+
     getmaxyx(stdscr,screenHeight,screenWidth);
     return 0;
 }
 
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_hasColors(JNIEnv *env, jobject obj)
+{
+    return has_colors();
+}
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_endwin(JNIEnv *env, jobject obj)
 {
@@ -74,7 +90,7 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_clear(JNIEnv *env, jobject obj)
 }
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attron(JNIEnv *env, jobject obj, jint pair)
 {
-    return attron(COLOR_PAIR(pair));
+    return  (COLOR_PAIR(pair));
 }
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_attroff(JNIEnv *env, jobject obj, jint pair)
 {
@@ -101,9 +117,11 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_clrtoeol(JNIEnv *env, jobject o
 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenWidth(JNIEnv *env, jobject obj)
 {
+//    getmaxyx(stdscr,screenHeight,screenWidth);
     return screenWidth;
 }
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenHeight(JNIEnv *env, jobject obj)
 {
+//    getmaxyx(stdscr,screenHeight,screenWidth);
     return screenHeight;
 }
