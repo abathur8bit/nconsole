@@ -1,6 +1,9 @@
 package com.axorion;
 
 public class NConsole {
+    private int width,height;
+    private boolean screenSizeChanged;
+
     public native int add(int n);
     public native int getch();
     public native int initscr();
@@ -17,8 +20,8 @@ public class NConsole {
     public native int clrtobot();
     public native int clrtoeol();
 
-    public native int getScreenWidth();
-    public native int getScreenHeight();
+    private native int getScreenWidth();
+    private native int getScreenHeight();
 
     public static int COLOR_BLACK=0;
     public static int COLOR_RED=1;
@@ -33,8 +36,29 @@ public class NConsole {
         move(0,0);
     }
 
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public boolean updateSize() {
+        boolean screenSizeChanged = false;
+        int newWidth = getScreenWidth();
+        int newHeight = getScreenHeight();
+        if(newWidth != width || newHeight != height) {
+            screenSizeChanged = true;
+            width = newWidth;
+            height = newHeight;
+        }
+        return screenSizeChanged;
+    }
+
     public NConsole() {
         System.loadLibrary("nconsole");
+        updateSize();
     }
 
     //java -Djava.library.path=cmake-build-debug NConsole

@@ -19,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/nconsole.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/nconsole.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cpp/nconsole.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/cpp/nconsole.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/com/axorion/NConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/axorion/NConsole.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-848">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="266">
+              <caret line="109" column="46" lean-forward="true" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -77,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/SalesFileViewer/src/SalesFileViewer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="1050" column="1" lean-forward="true" selection-start-line="1050" selection-start-column="1" selection-end-line="1050" selection-end-column="1" />
+            <state relative-caret-position="404">
+              <caret line="1603" column="13" lean-forward="true" selection-start-line="1603" selection-start-column="13" selection-end-line="1603" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -106,6 +107,7 @@
       <find>getmax</find>
       <find>cursordown</find>
       <find>loading</find>
+      <find>mainloop</find>
     </findStrings>
     <replaceStrings>
       <replace>NConsole</replace>
@@ -219,6 +221,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="566" y="1473" width="1400" height="850" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2569956" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -285,15 +288,15 @@
     </entry>
     <entry file="file://$USER_HOME$/Downloads/SalesFileViewer/src/SalesFileViewer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="1050" column="1" lean-forward="true" selection-start-line="1050" selection-start-column="1" selection-end-line="1050" selection-end-column="1" />
+        <state relative-caret-position="404">
+          <caret line="1603" column="13" lean-forward="true" selection-start-line="1603" selection-start-column="13" selection-end-line="1603" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cpp/nconsole.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-848">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="266">
+          <caret line="109" column="46" lean-forward="true" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
