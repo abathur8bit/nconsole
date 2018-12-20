@@ -15,6 +15,7 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_move(JNIEnv *env, jobject obj, 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getch(JNIEnv *env, jobject obj);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenWidth(JNIEnv *env, jobject obj);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenHeight(JNIEnv *env, jobject obj);
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_refresh(JNIEnv *env, jobject obj);
 /*
  * Class:     NConsole
  * Method:    printw

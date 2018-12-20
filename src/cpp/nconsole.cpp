@@ -115,3 +115,8 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenHeight(JNIEnv *env, jo
     getmaxyx(stdscr,screenHeight,screenWidth);
     return screenHeight;
 }
+
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_refresh(JNIEnv *env, jobject obj)
+{
+    return refresh();
+}

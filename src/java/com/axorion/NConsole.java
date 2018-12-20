@@ -19,6 +19,7 @@ public class NConsole {
     public native int clear();
     public native int clrtobot();
     public native int clrtoeol();
+    public native int refresh();
 
     private native int getScreenWidth();
     private native int getScreenHeight();
