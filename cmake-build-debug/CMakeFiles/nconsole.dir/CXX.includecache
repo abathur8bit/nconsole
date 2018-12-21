@@ -19,7 +19,7 @@ jni_md.h
 /Users/lee/workspace/nconsole/src/cpp/nconsole.cpp
 nconsole.h
 /Users/lee/workspace/nconsole/src/cpp/nconsole.h
-iostream
+string.h
 -
 curses.h
 -
