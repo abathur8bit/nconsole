@@ -6,6 +6,8 @@ public class NConsole {
 
     public native int add(int n);
     public native int getch();
+    /** Sets the timeout for getch() call. -1 blocks, 0 non blocking, >0 milliseconds to wait. */
+    public native int timeout(int delayms);
     public native int initscr();
     public native int hasColors();
     public native int move(int x,int y);

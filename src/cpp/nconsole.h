@@ -13,6 +13,7 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_hasColors(JNIEnv *env, jobject 
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_endwin(JNIEnv *env, jobject obj);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_move(JNIEnv *env, jobject obj, jint x,jint y);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getch(JNIEnv *env, jobject obj);
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_timeout(JNIEnv *env, jobject obj,jint delayms);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenWidth(JNIEnv *env, jobject obj);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getScreenHeight(JNIEnv *env, jobject obj);
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_refresh(JNIEnv *env, jobject obj);

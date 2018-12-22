@@ -35,6 +35,13 @@ JNIEXPORT jint JNICALL Java_com_axorion_NConsole_move(JNIEnv *env, jobject obj, 
 {
     return move(y,x);
 }
+
+JNIEXPORT jint JNICALL Java_com_axorion_NConsole_timeout(JNIEnv *env, jobject obj,jint delayms)
+{
+    timeout(delayms);
+    return 1;
+}
+
 JNIEXPORT jint JNICALL Java_com_axorion_NConsole_getch(JNIEnv *env, jobject obj)
 {
     return getch();
