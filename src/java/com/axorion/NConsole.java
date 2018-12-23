@@ -10,6 +10,7 @@ public class NConsole {
     public native int timeout(int delayms);
     public native int initscr();
     public native int hasColors();
+    /** Move cursor to the specified location. Note that it is x,y not y,x like curses. */
     public native int move(int x,int y);
     public native int endwin();
     public native int printw(String s);
