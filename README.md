@@ -10,6 +10,12 @@ nconsole.iml is the IntelliJ Java project file.
 ## Windows 
 No build for Windows yet. Planning to add that soon. Would like to use the native Windows console API.
 
+Build a DLL in Windows: 
+
+```
+cl -I\java\jdk1.8.0_45\include -I\java\jdk1.8.0_45\include\win32 -LD nconsole.cpp -Fenconsole.dll
+```
+
 [Console programming on Windows](https://docs.microsoft.com/en-us/windows/console/console-reference)
 
 # Building 
