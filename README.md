@@ -35,6 +35,13 @@ cmake CMakeLists.txt
 make
 ```
 
+# Running test app
+Quick test app to see things work, and test reading input and what the keystroke is mapped to.
+
+```
+java -cp out/production/nconsole -Djava.library.path=./cmake-build-debug com.axorion.NConsole $@
+```
+
 ## Java library
 Then build the java lib, which results in nconsole.jar put in the current directory:
 
